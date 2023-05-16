@@ -10,15 +10,27 @@
 <body>
     <main>
         <section class="entrance">
-                <h1>Bar Entrance</h1>
-                <div class="details-on-the-door">
-                    <div class="left-vertical"></div>
-                    <div class="right-vertical"></div>
-                    <div class="left-door-knob"></div>
-                    <div class="right-door-knob"></div>
+            <h1>Bar Entrance</h1>
+            <div id="closed-door">
+                <div class="left-vertical"></div>
+                <div class="right-vertical"></div>
+                <div class="left-door-knob"></div>
+                <div class="right-door-knob"></div>
                 <div class="door"></div>
+            </div>
+            <div id="opened-door">
+                <div class="door-op"></div>
+                <div class="left-door-op"></div>
+                <div class="right-door-op"></div>
+                <a id="toHall" href="hall/hall.html">&#9650;</a>
             </div>
         </section>
     </main>
+    <script>
+        (function() {
+            const closedDoor = document.getElementById("closed-door");
+            closedDoor.remove();
+        }());
+    </script>
 </body>
 </html>
