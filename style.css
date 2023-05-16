@@ -3,9 +3,11 @@
     flex-direction: column;
     align-items: center;
 }
+
 h1 {
     font-size: 50px
 }
+
 .door {
     width: 250px;
     height: 400px;
@@ -13,9 +15,7 @@ h1 {
     border-radius: 100px 100px 0 0;
     border: solid 10px rgb(90, 60, 25);
 }
-.details-on-the-door {
-    
-}
+
 .left-vertical {
     width: 10px;
     height: 400px;    
@@ -47,4 +47,38 @@ h1 {
     position: absolute;
     right: 47.3%;
     top: 360px;
+}
+
+.door-op {
+    width: 250px;
+    height: 400px;
+    background-color: white;
+    border-radius: 100px 100px 0 0;
+    border: solid 10px rgb(90, 60, 25);
+}
+.left-door-op {
+    width: 50px;
+    height: 402px;
+    background-color: coral;
+    border-radius: 0 50px 5px 0;
+    border: solid 10px rgb(90, 60, 25);
+    position: absolute;
+    top: 150px;
+    left: 40%;
+}
+.right-door-op {
+    width: 50px;
+    height: 402px;
+    background-color: coral;
+    border-radius: 50px 0 0 5px;
+    border: solid 10px rgb(90, 60, 25);
+    position: absolute;
+    top: 150px;
+    right: 40%;
+}
+
+#toHall {
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
 }
