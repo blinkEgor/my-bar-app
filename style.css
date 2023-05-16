@@ -1,0 +1,50 @@
+.entrance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 50px
+}
+.door {
+    width: 250px;
+    height: 400px;
+    background-color: coral;
+    border-radius: 100px 100px 0 0;
+    border: solid 10px rgb(90, 60, 25);
+}
+.details-on-the-door {
+    
+}
+.left-vertical {
+    width: 10px;
+    height: 400px;    
+    background-color: rgb(90, 60, 25);
+    position: absolute;
+    left: 49.3%;
+    top: 159px;
+}
+.right-vertical {
+    width: 10px;
+    height: 400px;    
+    background-color: rgb(90, 60, 25);
+    position: absolute;
+    right: 49.3%;
+    top: 159px;
+}
+.left-door-knob {
+    width: 25px;
+    height: 10px;
+    background-color: rgb(90, 60, 25);
+    position: absolute;
+    left: 47.3%;
+    top: 360px;
+}
+.right-door-knob {
+    width: 25px;
+    height: 10px;
+    background-color: rgb(90, 60, 25);
+    position: absolute;
+    right: 47.3%;
+    top: 360px;
+}
