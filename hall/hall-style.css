@@ -1,0 +1,39 @@
+main {
+    display: flex;
+    justify-content: space-around;
+}
+#sec-1 {
+    border: blue solid 3px;
+    flex-basis: 20%;
+    height: 600px;
+}
+#bar-chairs-hall {
+    border: red solid 3px;
+    flex-basis: 50%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#bar {
+    width: 400px;
+    height: 100px;
+    background-color: darkslateblue;
+}
+#chairs {
+    display: flex;
+    justify-content: center;
+}
+.chair {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: blueviolet;
+    margin: 0 20px 0 20px;
+}
+#sec-3 {
+    border: green solid 3px;
+    flex-basis: 20%;
+    height: 600px;
+}
