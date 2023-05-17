@@ -5,7 +5,12 @@
 }
 
 h1 {
-    font-size: 50px
+    font-size: 50px;
+    background-color: blueviolet;
+    color: white;
+    padding: 0 10px 0 10px;
+    border-radius: 20px 20px 0 0;
+    font-family: monospace;
 }
 
 .door {
@@ -55,6 +60,9 @@ h1 {
     background-color: white;
     border-radius: 100px 100px 0 0;
     border: solid 10px rgb(90, 60, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .left-door-op {
     width: 50px;
@@ -78,7 +86,7 @@ h1 {
 }
 
 #toHall {
-    font-size: 50px;
+    font-size: 150px;
     text-decoration: none;
-    color: black;
+    color: blueviolet;
 }
