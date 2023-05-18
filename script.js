@@ -1,7 +1,7 @@
 const closedDoor = document.getElementById("closed-door");
 const openedDoor = document.getElementById("opened-door");
-const leftDoorOp = document.querySelector(".left-door-op");
-const rightDoorOp = document.querySelector(".right-door-op");
+const leftDoorOp = document.getElementById("left-door-op");
+const rightDoorOp = document.getElementById("right-door-op");
 
 openedDoor.style.display = "none";
 
