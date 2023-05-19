@@ -6,7 +6,7 @@ const rightDoorOp = document.getElementById("right-door-op");
 openedDoor.style.display = "none";
 
 const openTheDoor = () => {
-    closedDoor.style.display = "none"
+    closedDoor.style.display = "none";
     openedDoor.style.display = "";
 };
 closedDoor.addEventListener("click", openTheDoor);
