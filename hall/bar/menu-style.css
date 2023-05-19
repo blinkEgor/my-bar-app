@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    border: solid 20px rgb(90, 60, 25);
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+
+#drink-name {
+    display: flex;
+    flex-direction: column;
+}
+#drink-compound {
+    display: flex;
+    flex-direction: column;
+}
+#drink-price {
+    display: flex;
+    flex-direction: column;
+}
