@@ -1,5 +1,6 @@
-main {
+#main {
     display: flex;
+    justify-content: space-around;
     border: solid 20px rgb(90, 60, 25);
     border-radius: 10px;
     background-color: black;
@@ -18,4 +19,8 @@ main {
 #drink-price {
     display: flex;
     flex-direction: column;
+}
+
+.title {
+    border-bottom: solid white 3px;
 }

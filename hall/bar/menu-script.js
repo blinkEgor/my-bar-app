@@ -2,11 +2,9 @@
 
 class Components {
     constructor(name, volume, price) {
-        name = this.name;
-        volume = this.volume;
-        price = this.price;
-        unit = "ml";
-        currency = "$";
+        this.name = name;
+        this.volume = volume;
+        this.price = price;
     }
 }
 const gin = new Components("Gin", 500, 11.60);
@@ -20,3 +18,22 @@ const dryVermouth = new Components("Dry Vermouth", 500, 33.00);
 const cocaCola = new Components("Coca Cola", 2000, 4.70);
 
 // glass of drink...
+
+class GlassOf {
+    constructor(volume, tax) {
+        this.volume = 200;
+        this.tax = 1.5;
+    }
+    makeGlassOf(comp) {
+        const name = `A glass of ${comp.name}`;
+        const price = Math.round((((this.volume * comp.price) / comp.volume) * this.tax) * 10) / 10;
+        console.log(name);
+        console.log(`${this.volume} ml`);
+        console.log(`$${price.toFixed(2)}`);
+    }
+}
+const glassOf = new GlassOf();
+glassOf.makeGlassOf(richJuice);
+glassOf.makeGlassOf(tonic);
+glassOf.makeGlassOf(soda);
+glassOf.makeGlassOf(cocaCola);
