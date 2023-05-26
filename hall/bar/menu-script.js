@@ -20,20 +20,52 @@ const cocaCola = new Components("Coca Cola", 2000, 4.70);
 // glass of drink...
 
 class GlassOf {
-    constructor(volume, tax) {
+    constructor(drinkName, drinkCompound, drinkPrice) {
+        this.drinkName = drinkName;
+        this.drinkCompound = drinkCompound;
+        this.drinkPrice = drinkPrice;
         this.volume = 200;
         this.tax = 1.5;
     }
-    makeGlassOf(comp) {
-        const name = `A glass of ${comp.name}`;
-        const price = Math.round((((this.volume * comp.price) / comp.volume) * this.tax) * 10) / 10;
-        console.log(name);
-        console.log(`${this.volume} ml`);
-        console.log(`$${price.toFixed(2)}`);
+    makeGlassOfName(comp) {
+        const el = document.createElement("p");
+        this.drinkName.append(el);
+        el.innerText = `A glass of ${comp.name}`;
     }
+    makeGlassOfCompound(comp) {
+        const el = document.createElement("p");
+        this.drinkCompound.append(el);
+        el.innerText = `${comp.name} ${this.volume} ml`;
+    }
+    makeGlassOfPrice(comp) {
+        const el = document.createElement("p");
+        const price = (Math.round((((this.volume * comp.price) / comp.volume) * this.tax) * 10) / 10).toFixed(2);
+        this.drinkPrice.append(el);
+        el.innerText = `$${price}`;
+
+        console.log(`$${price}`);
+    }
+    
 }
-const glassOf = new GlassOf();
-glassOf.makeGlassOf(richJuice);
-glassOf.makeGlassOf(tonic);
-glassOf.makeGlassOf(soda);
-glassOf.makeGlassOf(cocaCola);
+const glassOf = new GlassOf(
+    document.getElementById("drink-name"),
+    document.getElementById("drink-compound"),
+    document.getElementById("drink-price")
+);
+glassOf.makeGlassOfName(richJuice);
+glassOf.makeGlassOfName(tonic);
+glassOf.makeGlassOfName(soda);
+glassOf.makeGlassOfName(cocaCola);
+
+glassOf.makeGlassOfCompound(richJuice);
+glassOf.makeGlassOfCompound(tonic);
+glassOf.makeGlassOfCompound(soda);
+glassOf.makeGlassOfCompound(cocaCola);
+
+glassOf.makeGlassOfPrice(richJuice);
+glassOf.makeGlassOfPrice(tonic);
+glassOf.makeGlassOfPrice(soda);
+glassOf.makeGlassOfPrice(cocaCola);
+
+// cocktails...
+
