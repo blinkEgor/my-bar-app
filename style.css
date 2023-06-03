@@ -19,41 +19,38 @@ h1 {
     background-color: coral;
     border-radius: 100px 100px 0 0;
     border: solid 10px rgb(90, 60, 25);
+    display: flex;
+    justify-content: center;
 }
 
 #left-vertical {
     width: 10px;
     height: 400px;    
     background-color: rgb(90, 60, 25);
-    position: absolute;
-    left: 49.3%;
-    top: 159px;
+    margin: 0 2.5px 0 5px;
 }
 #right-vertical {
     width: 10px;
     height: 400px;    
     background-color: rgb(90, 60, 25);
-    position: absolute;
-    right: 49.3%;
-    top: 159px;
+    margin: 0 5px 0 2.5px;
 }
 #left-door-knob {
     width: 25px;
     height: 10px;
     background-color: rgb(90, 60, 25);
-    position: absolute;
-    left: 47.3%;
-    top: 360px;
+    margin: 180px 5px 0 5px;
 }
 #right-door-knob {
     width: 25px;
     height: 10px;
     background-color: rgb(90, 60, 25);
-    position: absolute;
-    right: 47.3%;
-    top: 360px;
+    margin: 180px 5px 0 5px;
 }
 
+#opened-door {
+    display: flex;
+}
 #door-op {
     width: 250px;
     height: 400px;
@@ -70,9 +67,8 @@ h1 {
     background-color: coral;
     border-radius: 0 50px 5px 0;
     border: solid 10px rgb(90, 60, 25);
-    position: absolute;
-    top: 150px;
-    left: 40%;
+    position: relative;
+    left: 20px;
 }
 #right-door-op {
     width: 50px;
@@ -80,9 +76,8 @@ h1 {
     background-color: coral;
     border-radius: 50px 0 0 5px;
     border: solid 10px rgb(90, 60, 25);
-    position: absolute;
-    top: 150px;
-    right: 40%;
+    position: relative;
+    right: 20px;
 }
 
 #toHall {
