@@ -1,16 +1,32 @@
 // constants..
 
 const tax = 1.5;
-const drinkName = document.getElementById("drink-name");
-const drinkCompound = document.getElementById("drink-compound");
-const drinkPrice = document.getElementById("drink-price");
 const names = [];
 const compounds = [];
 const prices = [];
 
 // print...
 
-
+const printText = (nam, com, pri) => {
+    // for names
+    for (let i = 0; i < nam.length; i++) {
+        const p = document.createElement("p");
+        document.getElementById("drink-name").append(p);
+        p.innerText = nam[i];
+    }
+    // for compounds
+    for (let i = 0; i < com.length; i++) {
+        const p = document.createElement("p");
+        document.getElementById("drink-compound").append(p);
+        p.innerText = com[i];
+    }
+    // for price
+    for (let i = 0; i < nam.length; i++) {
+        const p = document.createElement("p");
+        document.getElementById("drink-price").append(p);
+        p.innerText = pri[i];
+    }
+};
 
 // components...
 
@@ -46,3 +62,10 @@ console.log(names);
 console.log(compounds);
 console.log(prices);
 
+// cocktails 
+
+
+
+// finish print
+
+printText(names, compounds, prices);
