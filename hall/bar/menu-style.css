@@ -1,5 +1,6 @@
 #main {
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     border: solid 20px rgb(90, 60, 25);
     border-radius: 10px;
@@ -8,20 +9,26 @@
     font-family: monospace;
 }
 
-#drink-name {
+div {
     display: flex;
-    flex-direction: column;
 }
-#drink-compound {
-    display: flex;
-    flex-direction: column;
+
+p {
+    flex-basis: 33%;
+    position: relative;
+    left: 30px;
 }
-#drink-price {
-    display: flex;
-    flex-direction: column;
+
+#drink {
+    justify-content: space-around;
+    text-align: center;
 }
 
 .title {
     border-bottom: solid white 3px;
-    text-align: center;
+    flex-basis: 33%;
+}
+
+#content {
+    flex-direction: column;
 }

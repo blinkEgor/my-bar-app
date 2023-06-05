@@ -10,22 +10,30 @@ const prices = [];
 const printText = (nam, com, pri) => {
     // for names
     for (let i = 0; i < nam.length; i++) {
-        const p = document.createElement("p");
-        document.getElementById("drink-name").append(p);
-        p.innerText = nam[i];
+        const div = document.createElement("div");
+        document.getElementById("content").append(div);
+        const pName = document.createElement("p");
+        div.append(pName);
+        pName.innerHTML = nam[i];
+        const pCompounds = document.createElement("p");
+        div.append(pCompounds);
+        pCompounds.innerHTML = com[i];
+        const pPrice = document.createElement("p");
+        div.append(pPrice);
+        pPrice.innerHTML = pri[i];
     }
     // for compounds
-    for (let i = 0; i < com.length; i++) {
+    /*for (let i = 0; i < com.length; i++) {
         const p = document.createElement("p");
         document.getElementById("drink-compound").append(p);
-        p.innerText = com[i];
+        p.innerHTML = com[i];
     }
     // for price
     for (let i = 0; i < nam.length; i++) {
         const p = document.createElement("p");
         document.getElementById("drink-price").append(p);
-        p.innerText = pri[i];
-    }
+        p.innerHTML = pri[i];
+    }*/
 };
 
 // components...
@@ -58,14 +66,69 @@ glassOf(components.tonic);
 glassOf(components.soda);
 glassOf(components.cocaCola);
 
-console.log(names);
-console.log(compounds);
-console.log(prices);
+const shotOf = ({name, volume, price}) => {
+    const thisName = `Shot of ${name}`;
+    const thisCompound = `${name} 40 ml`;
+    const total = `$${ (Math.round((((40 * price) / volume) * tax) * 10) / 10).toFixed(2) }`;
+    names.push(thisName);
+    compounds.push(thisCompound);
+    prices.push(total);
+};
+
+shotOf(components.gin);
+shotOf(components.dryVermouth);
+shotOf(components.vodka);
 
 // cocktails 
 
+const cocktails = {
+    lemonade: {
+        name: `Lemonade`,
+        makeCoctale(lemonJuice, soda, sugarSyrup) {
+            const thisCompound = `${soda.name} 150 ml<br>${sugarSyrup.name} 30 ml<br>${lemonJuice.name} 20 ml`;
+            const total = `$${ (Math.round(((
+                (200 * soda.price / soda.volume) + 
+                (50 * sugarSyrup.price / sugarSyrup.volume) + 
+                (50 * lemonJuice.price / lemonJuice.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    greyhound: {
+        name: `Greyhound`,
+        makeCoctale(gin, richJuice) {
+            const thisCompound = `${gin.name} 50 ml<br>${richJuice.name} 200 ml`;
+            const total = `$${ (Math.round(((
+                (50 * gin.price / gin.volume) + 
+                (200 * richJuice.price / richJuice.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    saltyDog: {},
+    ginAndTonic: {},
+    ginFizz: {},
+    johnCollins: {},
+    gibson: {},
+    capeCod: {},
+    lemonCandy: {},
+    martiniVodka: {},
+    seaBreeze: {},
+    dryMartini: {},
+};
+
+cocktails.lemonade.makeCoctale(components.lemonJuice, components.soda, components.sugarSyrup);
+cocktails.greyhound.makeCoctale(components.gin, components.richJuice);
 
 
 // finish print
+
+console.log(names);
+console.log(compounds);
+console.log(prices);
 
 printText(names, compounds, prices);
