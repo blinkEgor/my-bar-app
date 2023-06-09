@@ -8,7 +8,6 @@ const prices = [];
 // print...
 
 const printText = (nam, com, pri) => {
-    // for names
     for (let i = 0; i < nam.length; i++) {
         const div = document.createElement("div");
         document.getElementById("content").append(div);
@@ -42,7 +41,7 @@ const components = {
     gin: { name: "Gin", volume: 500, price: 11.60 },
     richJuice: { name: "Rich Juice", volume: 1000, price: 4.00 },
     lemonJuice: { name: "Lemon Juice", volume: 1000, price: 10.00 },
-    tonic: { name: "Tonic", volume: 1000, price: 3.40 },
+    tonic: { name: "Tonic", volume: 1000, price: 2.50 },
     soda: { name: "Soda", volume: 1000, price: 1.90 },
     sugarSyrup: { name: "Sugar Syrup", volume: 1500, price: 4.50 },
     vodka: { name: "Vodka", volume: 500, price: 9.80 },
@@ -99,7 +98,7 @@ const cocktails = {
     greyhound: {
         name: `Greyhound`,
         makeCoctale(gin, richJuice) {
-            const thisCompound = `${gin.name} 50 ml<br>${richJuice.name} 200 ml`;
+            const thisCompound = `${gin.name} 50 ml<br>${richJuice.name} 100-200 ml`;
             const total = `$${ (Math.round(((
                 (50 * gin.price / gin.volume) + 
                 (200 * richJuice.price / richJuice.volume)
@@ -109,21 +108,160 @@ const cocktails = {
             prices.push(total);
         }
     },
-    saltyDog: {},
-    ginAndTonic: {},
-    ginFizz: {},
-    johnCollins: {},
-    gibson: {},
-    capeCod: {},
-    lemonCandy: {},
-    martiniVodka: {},
-    seaBreeze: {},
-    dryMartini: {},
+    saltyDog: {
+        name: `Salty Dog`,
+        makeCoctale(gin, richJuice) {
+            const thisCompound = `${gin.name} 40 ml<br>${richJuice.name} 100 ml`;
+            const total = `$${ (Math.round(((
+                (40 * gin.price / gin.volume) + 
+                (100 * richJuice.price / richJuice.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    ginAndTonic: {
+        name: `Gin & Tonic`,
+        makeCoctale(gin, tonic) {
+            const thisCompound = `${gin.name} 50 ml<br>${tonic.name} 100-200 ml`;
+            const total = `$${ (Math.round(((
+                (50 * gin.price / gin.volume) + 
+                (200 * tonic.price / tonic.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    ginFizz: {
+        name: `Gin Fizz`,
+        makeCoctale(gin, lemonJuice, sugarSyrup, soda) {
+            const thisCompound = `${gin.name} 45 ml<br>${lemonJuice.name} 30 ml<br>
+                ${sugarSyrup.name} 10 ml<br>${soda.name} 100-200 ml`;
+            const total = `$${ (Math.round(((
+                (45 * gin.price / gin.volume) + 
+                (50 * lemonJuice.price / lemonJuice.volume) + 
+                (50 * sugarSyrup.price / sugarSyrup.volume) + 
+                (200 * soda.price / soda.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    johnCollins: {
+        name: `John Collins`,
+        makeCoctale(gin, lemonJuice, sugarSyrup, soda) {
+            const thisCompound = `${gin.name} 45 ml<br>${lemonJuice.name} 30 ml<br>
+                ${sugarSyrup.name} 15 ml<br>${soda.name} 100-200 ml`;
+            const total = `$${ (Math.round(((
+                (45 * gin.price / gin.volume) + 
+                (50 * lemonJuice.price / lemonJuice.volume) + 
+                (50 * sugarSyrup.price / sugarSyrup.volume) + 
+                (200 * soda.price / soda.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    gibson: {
+        name: `Gibson`,
+        makeCoctale(gin, dryVermouth) {
+            const thisCompound = `${gin.name} 60 ml<br>${dryVermouth.name} 10 ml`;
+            const total = `$${ (Math.round(((
+                (60 * gin.price / gin.volume) + 
+                (10 * dryVermouth.price / dryVermouth.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    capeCod: {
+        name: `Cape Cod`,
+        makeCoctale(vodka, richJuice) {
+            const thisCompound = `${vodka.name} 40 ml<br>${richJuice.name} 100-200 ml`;
+            const total = `$${ (Math.round(((
+                (40 * vodka.price / vodka.volume) + 
+                (200 * richJuice.price / richJuice.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    lemonCandy: {
+        name: `Lemon Candy`,
+        makeCoctale(vodka, lemonJuice, sugarSyrup) {
+            const thisCompound = `${vodka.name} 50 ml<br>${lemonJuice.name} 25 ml<br>
+                ${sugarSyrup.name} 10 ml`;
+            const total = `$${ (Math.round(((
+                (50 * vodka.price / vodka.volume) + 
+                (50 * lemonJuice.price / lemonJuice.volume) + 
+                (50 * sugarSyrup.price / sugarSyrup.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    martiniVodka: {
+        name: `Martini Vodka`,
+        makeCoctale(vodka, dryVermouth) {
+            const thisCompound = `${vodka.name} 55 ml<br>${dryVermouth.name} 15 ml`;
+            const total = `$${ (Math.round(((
+                (55 * vodka.price / vodka.volume) + 
+                (15 * dryVermouth.price / dryVermouth.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    seaBreeze: {
+        name: `Sea Breeze`,
+        makeCoctale(vodka, richJuice) {
+            const thisCompound = `${vodka.name} 40 ml<br>${richJuice.name} 120-200 ml<br>
+                ${richJuice.name} 30-60 ml`;
+            const total = `$${ (Math.round(((
+                (40 * vodka.price / vodka.volume) + 
+                (200 * richJuice.price / richJuice.volume) + 
+                (60 * richJuice.price / richJuice.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
+    dryMartini: {
+        name: `Dry Martini`,
+        makeCoctale(gin, dryVermouth) {
+            const thisCompound = `${gin.name} 60 ml<br>${dryVermouth.name} 10 ml`;
+            const total = `$${ (Math.round(((
+                (60 * gin.price / gin.volume) + 
+                (10 * dryVermouth.price / dryVermouth.volume)
+                ) * tax) * 10) / 10).toFixed(2) }`;
+            names.push(this.name);
+            compounds.push(thisCompound);
+            prices.push(total);
+        }
+    },
 };
 
 cocktails.lemonade.makeCoctale(components.lemonJuice, components.soda, components.sugarSyrup);
 cocktails.greyhound.makeCoctale(components.gin, components.richJuice);
-
+cocktails.saltyDog.makeCoctale(components.gin, components.richJuice);
+cocktails.ginAndTonic.makeCoctale(components.gin, components.tonic);
+cocktails.ginFizz.makeCoctale(components.gin, components.lemonJuice, components.sugarSyrup, components.soda);
+cocktails.johnCollins.makeCoctale(components.gin, components.lemonJuice, components.sugarSyrup, components.soda);
+cocktails.gibson.makeCoctale(components.gin, components.dryVermouth);
+cocktails.capeCod.makeCoctale(components.vodka, components.richJuice);
+cocktails.lemonCandy.makeCoctale(components.vodka, components.lemonJuice, components.sugarSyrup);
+cocktails.martiniVodka.makeCoctale(components.vodka, components.dryVermouth);
+cocktails.seaBreeze.makeCoctale(components.vodka, components.richJuice);
+cocktails.dryMartini.makeCoctale(components.gin, components.dryVermouth);
 
 // finish print
 
