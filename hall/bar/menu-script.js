@@ -11,6 +11,7 @@ const printText = (nam, com, pri) => {
     for (let i = 0; i < nam.length; i++) {
         const div = document.createElement("div");
         document.getElementById("content").append(div);
+        div.classList.add("stock");
         const pName = document.createElement("p");
         div.append(pName);
         pName.innerHTML = nam[i];
@@ -21,18 +22,6 @@ const printText = (nam, com, pri) => {
         div.append(pPrice);
         pPrice.innerHTML = pri[i];
     }
-    // for compounds
-    /*for (let i = 0; i < com.length; i++) {
-        const p = document.createElement("p");
-        document.getElementById("drink-compound").append(p);
-        p.innerHTML = com[i];
-    }
-    // for price
-    for (let i = 0; i < nam.length; i++) {
-        const p = document.createElement("p");
-        document.getElementById("drink-price").append(p);
-        p.innerHTML = pri[i];
-    }*/
 };
 
 // components...
