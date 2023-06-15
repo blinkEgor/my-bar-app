@@ -1,3 +1,29 @@
+header {
+    display: flex;
+    color: white;
+    background-color: blueviolet;
+    margin-bottom: 5px;
+    justify-content: space-between;
+    border-radius: 10px 10px 0 0;
+    font-family: monospace;
+}
+h1 {
+    font-size: 40px;
+    margin: 5px 0 10px 10px;
+}
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-i {
+    margin: 10px 10px 0 10px;
+    font-size: 30px;
+}
+.to {
+    text-decoration: none;
+    color: white;
+}
+
 #main {
     display: flex;
     flex-direction: column;
