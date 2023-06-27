@@ -1,19 +1,17 @@
 const closedDoor = document.getElementById("closed-door");
 const openedDoor = document.getElementById("opened-door");
-const leftDoorOp = document.getElementById("left-door-op");
-const rightDoorOp = document.getElementById("right-door-op");
+const doorsOp = document.querySelector(".doors-op");
 
 openedDoor.style.display = "none";
 
-const openTheDoor = () => {
+closedDoor.addEventListener("click", 
+() => {
     closedDoor.style.display = "none";
     openedDoor.style.display = "";
-};
-closedDoor.addEventListener("click", openTheDoor);
+});
 
-const closeTheDoor = () => {
+doorsOp.addEventListener("click", 
+() => {
     openedDoor.style.display = "none";
     closedDoor.style.display = "";
-};
-leftDoorOp.addEventListener("click", closeTheDoor);
-rightDoorOp.addEventListener("click", closeTheDoor);
+});
