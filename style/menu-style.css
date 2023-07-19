@@ -1,23 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(90, 60, 25);
+}
+
 header {
     display: flex;
     color: white;
     background-color: blueviolet;
     margin-bottom: 5px;
+    padding-bottom: 5px;
     justify-content: space-between;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0 0 10px 10px;
     font-family: monospace;
+    flex-wrap: wrap;
 }
 h1 {
     font-size: 40px;
-    margin: 5px 0 10px 10px;
+    margin: 5px 10px 10px 10px;
 }
 nav {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 .nav-i {
     margin: 10px 10px 0 10px;
     font-size: 30px;
+    flex-basis: 0;
+    padding: 0;
 }
 .to {
     text-decoration: none;
@@ -42,16 +54,7 @@ div {
 p {
     flex-basis: 33%;
     margin-left: 30px;
-}
-
-#drink {
-    justify-content: space-around;
-    border-bottom: solid white 3px;
-}
-
-.title {
-    flex-basis: 33%;
-    margin-left: 30px;
+    padding: 10px;
 }
 
 #content {

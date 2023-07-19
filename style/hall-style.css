@@ -1,19 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 header {
     display: flex;
     color: white;
     background-color: blueviolet;
     margin-bottom: 5px;
+    padding-bottom: 5px;
     justify-content: space-between;
-    border-radius: 10px 10px 0 0;
+    border-radius: 0 0 10px 10px;
     font-family: monospace;
+    flex-wrap: wrap;
 }
 h1 {
     font-size: 40px;
-    margin: 5px 0 10px 10px;
+    margin: 5px 10px 10px 10px;
 }
 nav {
     display: flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 .nav-i {
     margin: 10px 10px 0 10px;
@@ -43,7 +50,7 @@ main {
     align-items: center;
 }
 #bar {
-    width: 400px;
+    width: 350px;
     height: 100px;
     background-color: darkslateblue;
     color: white;

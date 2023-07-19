@@ -4,14 +4,12 @@ const doorsOp = document.querySelector(".doors-op");
 
 openedDoor.style.display = "none";
 
-closedDoor.addEventListener("click", 
-() => {
+closedDoor.addEventListener("click", () => {
     closedDoor.style.display = "none";
     openedDoor.style.display = "";
 });
 
-doorsOp.addEventListener("click", 
-() => {
+doorsOp.addEventListener("click", () => {
     openedDoor.style.display = "none";
     closedDoor.style.display = "";
 });
