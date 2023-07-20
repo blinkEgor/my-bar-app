@@ -10,6 +10,31 @@ const prices = [];
 const printText = (nam, com, pri) => {
     for (let i = 0; i < nam.length; i++) {
         const div = document.createElement("div");
+        if(!(nam[i].indexOf('Glass'))) {
+            document.getElementById("glass").append(div);
+        } else if(!(nam[i].indexOf('Shot'))) {
+            document.getElementById("shot").append(div);
+        } else {
+            document.getElementById("cocktail").append(div);
+        }
+        div.classList.add("stock");
+        const pName = document.createElement("p");
+        div.append(pName);
+        pName.innerHTML = nam[i];
+        const pCompounds = document.createElement("p");
+        div.append(pCompounds);
+        pCompounds.innerHTML = com[i];
+        const pPrice = document.createElement("p");
+        div.append(pPrice);
+        pPrice.classList.add("pri");
+        pPrice.innerHTML = pri[i];
+    }
+};
+
+/*
+const printText = (nam, com, pri) => {
+    for (let i = 0; i < nam.length; i++) {
+        const div = document.createElement("div");
         document.getElementById("content").append(div);
         div.classList.add("stock");
         const pName = document.createElement("p");
@@ -23,6 +48,7 @@ const printText = (nam, com, pri) => {
         pPrice.innerHTML = pri[i];
     }
 };
+*/
 
 // components...
 

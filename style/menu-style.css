@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    background-color: rgb(90, 60, 25);
+    background-color: blueviolet;
 }
 
 header {
@@ -11,7 +11,7 @@ header {
     color: white;
     background-color: blueviolet;
     margin-bottom: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
     justify-content: space-between;
     border-radius: 0 0 10px 10px;
     font-family: monospace;
@@ -52,13 +52,22 @@ div {
 }
 
 p {
-    flex-basis: 33%;
-    margin-left: 30px;
+    flex-basis: 100%;
+    margin-left: 10px;
     padding: 10px;
 }
+.pri {
+    flex-basis: 50%;
+}
 
-#content {
+details {
     flex-direction: column;
+    margin: 10px;
+}
+summary {
+    font-size: 30px;
+    text-align: center;
+    list-style-type: none;
 }
 
 .stock {
