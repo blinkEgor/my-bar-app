@@ -31,25 +31,6 @@ const printText = (nam, com, pri) => {
     }
 };
 
-/*
-const printText = (nam, com, pri) => {
-    for (let i = 0; i < nam.length; i++) {
-        const div = document.createElement("div");
-        document.getElementById("content").append(div);
-        div.classList.add("stock");
-        const pName = document.createElement("p");
-        div.append(pName);
-        pName.innerHTML = nam[i];
-        const pCompounds = document.createElement("p");
-        div.append(pCompounds);
-        pCompounds.innerHTML = com[i];
-        const pPrice = document.createElement("p");
-        div.append(pPrice);
-        pPrice.innerHTML = pri[i];
-    }
-};
-*/
-
 // components...
 
 const components = {
@@ -285,3 +266,22 @@ console.log(compounds);
 console.log(prices);
 
 printText(names, compounds, prices);
+
+(function() {
+    const g = document.getElementById("glass").children;
+    const s = document.getElementById("shot").children;
+    const c = document.getElementById("cocktail").children;
+    for(let i = 1; i < g.length; i++) {
+        if(!(i % 2)) {
+            g[i].setAttribute("style", "color: gray");
+        }
+    } for(let i = 1; i < s.length; i++) {
+        if(!(i % 2)) {
+            s[i].setAttribute("style", "color: gray");
+        }
+    } for(let i = 1; i < c.length; i++) {
+        if(!(i % 2)) {
+            c[i].setAttribute("style", "color: gray");
+        }
+    }
+})();

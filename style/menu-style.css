@@ -47,10 +47,6 @@ nav {
     font-family: monospace;
 }
 
-div {
-    display: flex;
-}
-
 p {
     flex-basis: 100%;
     margin-left: 10px;
@@ -72,4 +68,5 @@ summary {
 
 .stock {
     border-bottom: solid 1px white;
+    display: flex;
 }
