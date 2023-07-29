@@ -58,7 +58,7 @@ main {
     width: 250px;
 	height: 50px;
     margin-left: 28px;
-	-webkit-transform: skew(-45deg);
+	/*-webkit-*/transform: skew(-45deg);
 }
 #bar-bottom {
     display: flex;
@@ -92,7 +92,7 @@ main {
     color: inherit;
     position: relative;
     bottom: 100px;
-    -webkit-transform: skewY(5deg);
+    /*-webkit-*/transform: skewY(5deg);
 }
 #bar-right {
     background-color: rgb(90, 60, 25);
@@ -102,7 +102,7 @@ main {
     height: 100px;
     position: relative;
     bottom: 28px;
-    -webkit-transform: skewY(-45deg);
+    /*-webkit-*/transform: skewY(-45deg);
 }
 
 #chairs {

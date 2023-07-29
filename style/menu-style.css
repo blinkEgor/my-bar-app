@@ -36,6 +36,10 @@ nav {
     color: white;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
 #main {
     display: flex;
     flex-direction: column;
@@ -45,6 +49,7 @@ nav {
     background-color: black;
     color: white;
     font-family: monospace;
+    width: 500px;
 }
 
 p {
@@ -69,4 +74,9 @@ summary {
 .stock {
     border-bottom: solid 1px white;
     display: flex;
+}
+@media (max-width: 450px) {
+    .com {
+        display: none;
+    }
 }

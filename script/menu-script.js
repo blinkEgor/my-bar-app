@@ -23,6 +23,7 @@ const printText = (nam, com, pri) => {
         pName.innerHTML = nam[i];
         const pCompounds = document.createElement("p");
         div.append(pCompounds);
+        pCompounds.classList.add("com");
         pCompounds.innerHTML = com[i];
         const pPrice = document.createElement("p");
         div.append(pPrice);
