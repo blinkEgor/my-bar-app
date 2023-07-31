@@ -10,9 +10,8 @@ header {
     margin-bottom: 5px;
     padding: 5px;
     justify-content: space-between;
-    border-radius: 0 0 10px 10px;
+    align-items: center;
     font-family: monospace;
-    flex-wrap: wrap;
 }
 h1 {
     font-size: 40px;
@@ -20,15 +19,69 @@ h1 {
 }
 nav {
     display: flex;
-    flex-wrap: wrap;
 }
 .nav-i {
-    margin: 10px 10px 0 10px;
+    margin: 10px;
     font-size: 30px;
 }
 .to {
     text-decoration: none;
     color: white;
+}
+.open { display: flex !important }
+.burger {
+    display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 30px;
+    margin: 10px;
+}
+.line {
+    height: 4px;
+    width: 100%;
+    transform: scale(1);
+    background-color: white;
+    border-radius: 2px;
+}
+.burger::before, .burger::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease 0s;
+}
+.burger::before { top: 0 }
+.burger::after { bottom: 0 }
+.burger.active .line { transform: scale(0) }
+.burger.active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+.burger.active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+@media (max-width: 500px) {
+    .burger { display: flex }
+    nav {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        background-color: darkviolet;
+    }
+    .nav-i { font-size: 50px }
 }
 
 main {
@@ -58,7 +111,7 @@ main {
     width: 250px;
 	height: 50px;
     margin-left: 28px;
-	/*-webkit-*/transform: skew(-45deg);
+	transform: skew(-45deg);
 }
 #bar-bottom {
     display: flex;
@@ -92,7 +145,7 @@ main {
     color: inherit;
     position: relative;
     bottom: 100px;
-    /*-webkit-*/transform: skewY(5deg);
+    transform: skewY(5deg);
 }
 #bar-right {
     background-color: rgb(90, 60, 25);
@@ -102,7 +155,7 @@ main {
     height: 100px;
     position: relative;
     bottom: 28px;
-    /*-webkit-*/transform: skewY(-45deg);
+    transform: skewY(-45deg);
 }
 
 #chairs {

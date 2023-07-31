@@ -1,3 +1,8 @@
+document.querySelector(".burger").addEventListener("click", () => {
+    document.querySelector(".burger").classList.toggle("active");
+    document.querySelector("nav").classList.toggle("open");
+})
+
 // constants..
 
 const tax = 1.5;
