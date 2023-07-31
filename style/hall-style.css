@@ -83,10 +83,10 @@ nav {
     }
     .nav-i {
         font-size: 50px;
-        padding: 0;
     }
 }
 
+.main-none { display: none }
 main {
     display: flex;
     font-family: monospace;
@@ -118,6 +118,7 @@ main {
 }
 #bar-bottom {
     display: flex;
+    width: auto;
 }
 #bar-main {
     background-color: rgb(90, 60, 25);
