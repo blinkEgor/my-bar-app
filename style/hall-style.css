@@ -81,7 +81,10 @@ nav {
         overflow-y: auto;
         background-color: darkviolet;
     }
-    .nav-i { font-size: 50px }
+    .nav-i {
+        font-size: 50px;
+        padding: 0;
+    }
 }
 
 main {
@@ -156,21 +159,4 @@ main {
     position: relative;
     bottom: 28px;
     transform: skewY(-45deg);
-}
-
-#chairs {
-    display: flex;
-    justify-content: center;
-}
-.chair {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background-color: blueviolet;
-    margin: 0 20px 0 20px;
-}
-#carpet {
-    width: 250px;
-    height: 300px;
-    background-color: rgb(155, 56, 56);
 }
