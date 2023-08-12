@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* -------- BURGER MENU -------- */
 header {
     display: flex;
     color: white;
@@ -83,3 +83,66 @@ nav {
     }
     .nav-i { font-size: 50px }
 }
+/* --------------------------------------------- */
+/* ---------------- Bar ------------------------ */
+section {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.circle-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: solid 10px rgb(239, 236, 150);
+    border-radius: 50%;
+}
+.cocktail-juice {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.straight-glass {
+    width: 50px;
+    height: 100px;
+    border: solid 5px lightgray;
+    border-top: solid 1px lightgray;
+    background-color: white;
+}
+.juice {
+    background-color: coral;
+    height: 60%;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.glare {
+    border-top: solid 6px lightgray;
+    border-bottom: solid 6px lightgray;
+    width: 20px;
+    height: 20px;
+    transform: skew(-45deg)
+    rotate(-45deg)
+}
+.bottom {
+    background-color: lightgray;
+    height: 20%;
+}
+.text {
+    margin: 5px;
+    border-radius: 15px;
+    padding: 10px;
+}
+.price { background-color: lightgreen }
+.name { background-color: rgb(239, 236, 150) }
