@@ -139,6 +139,7 @@ section {
     justify-content: center;
     align-items: center;
 }
+.cola { background-color: rgb(49, 10, 10) }
 .bubbles {
     width: 10px;
     height: 10px;
