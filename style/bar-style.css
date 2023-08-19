@@ -172,3 +172,13 @@ section {
 }
 .price { background-color: lightgreen }
 .name { background-color: rgb(239, 236, 150) }
+.short-glass {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 40px;
+    height: 80px;
+    border: solid 5px lightgray;
+    border-top: solid 1px lightgray;
+    background-color: white;
+}
