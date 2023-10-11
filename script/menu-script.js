@@ -40,8 +40,8 @@ const printText = (nam, com, pri) => {
 // components...
 
 const components = {
-    gin: { name: "Gin", volume: 500, price: 11.60 },
-    richJuice: { name: "Rich Juice", volume: 1000, price: 4.00 },
+    gin: { name: "Gin", volume: 500, price: 14.40 },
+    richJuice: { name: "Rich Juice", volume: 1000, price: 4.20 },
     lemonJuice: { name: "Lemon Juice", volume: 1000, price: 10.00 },
     tonic: { name: "Tonic", volume: 1000, price: 2.50 },
     soda: { name: "Soda", volume: 1000, price: 1.90 },
