@@ -279,15 +279,15 @@ printText(names, compounds, prices);
     const c = document.getElementById("cocktail").children;
     for(let i = 1; i < g.length; i++) {
         if(!(i % 2)) {
-            g[i].setAttribute("style", "color: gray");
+            g[i].setAttribute("style", "color: rgb(200, 200, 200)");
         }
     } for(let i = 1; i < s.length; i++) {
         if(!(i % 2)) {
-            s[i].setAttribute("style", "color: gray");
+            s[i].setAttribute("style", "color: rgb(200, 200, 200)");
         }
     } for(let i = 1; i < c.length; i++) {
         if(!(i % 2)) {
-            c[i].setAttribute("style", "color: gray");
+            c[i].setAttribute("style", "color: rgb(200, 200, 200)");
         }
     }
 })();
