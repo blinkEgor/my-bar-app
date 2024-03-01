@@ -43,7 +43,7 @@ const components = {
     gin: { name: "Gin", volume: 500, price: 14.40 },
     richJuice: { name: "Rich Juice", volume: 1000, price: 4.20 },
     lemonJuice: { name: "Lemon Juice", volume: 1000, price: 10.00 },
-    tonic: { name: "Tonic", volume: 1000, price: 2.80 },
+    tonic: { name: "Tonic", volume: 1000, price: 3.70 },
     soda: { name: "Soda", volume: 1000, price: 1.90 },
     sugarSyrup: { name: "Sugar Syrup", volume: 1500, price: 4.50 },
     vodka: { name: "Vodka", volume: 500, price: 9.80 },
